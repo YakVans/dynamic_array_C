@@ -13,6 +13,11 @@ typedef struct DynamicArray{
     FieldInfo *field_info;
 } DynamicArray;
 
+typedef struct {
+    DynamicArray *result;
+    ErrorCode errorCode;
+} DAErrorPair;
+
 ErrorCode dynamic_array_init(DynamicArray *arr, FieldInfo *field_info);
 ErrorCode dynamic_array_add(DynamicArray *arr, const void *element);
 ErrorCode dynamic_array_sort(DynamicArray *arr);

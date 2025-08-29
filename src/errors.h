@@ -3,8 +3,6 @@
 
 #include <stdio.h>
 
-typedef struct DynamicArray DynamicArray;
-
 typedef enum {
     SUCCESS,
     ERR_NULL_PTR,
@@ -26,10 +24,5 @@ typedef struct {
     int result;
     ErrorCode errorCode;
 } IntErrorPair;
-
-typedef struct {
-    DynamicArray *result;
-    ErrorCode errorCode;
-} DAErrorPair;
 
 #endif
